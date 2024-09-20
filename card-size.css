@@ -10,6 +10,10 @@ html {
     #tablet {
       display: none;
     }
+
+    #desktop-big {
+      display: none;
+    }
   
     .cardIntroduction {
       grid-row: span 4 / auto;
@@ -17,7 +21,7 @@ html {
     }
   
     .cardInfo {
-      grid-row: span 6 / auto;
+      grid-row: span 7 / auto;
       grid-column: span 2 / auto;
     }
   
@@ -27,6 +31,8 @@ html {
     }
   }
   
+
+
   
   @media only screen and (max-width: 1550px) and (min-width: 511px) {
     #desktop {
@@ -36,6 +42,10 @@ html {
     #mobile {
       display: none;
     }
+
+    #desktop-big {
+      display: none;
+    }
   
   
     .cardIntroduction {
@@ -55,12 +65,49 @@ html {
   }
   
   
-  @media only screen and (min-width: 1551px) {
+
+
+  @media only screen and (max-width: 2000px) and (min-width: 1551px) { 
     #mobile {
       display: none;
     }
   
     #tablet {
+      display: none;
+    }
+
+    #desktop {
+      display: none;
+    }
+  
+    .cardIntroduction {
+      grid-row: span 5 / auto;
+      grid-column: span 4 / auto;
+    }
+  
+    .cardFooter {
+      grid-row: span 1 / auto;
+      grid-column: span 4 / auto;
+    }
+  
+    .cardInfo {
+      grid-row: span 6 / auto;
+      grid-column: span 4 / auto;
+    }
+  }
+
+
+
+  @media only screen and (min-width: 2001px) { 
+    #mobile {
+      display: none;
+    }
+  
+    #tablet {
+      display: none;
+    }
+
+    #desktop-big {
       display: none;
     }
   
