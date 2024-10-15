@@ -1,582 +1,406 @@
 html {
-   scroll-behavior: smooth;
-}
+    scroll-behavior: smooth;
+ }
+ 
+ 
+ @media only screen and (max-width: 510px) {
+    #desktop {
+       display: none;
+    }
 
+    #desktop-big {
+      display: none;
+   }
 
-@media only screen and (max-width: 510px) {
-   #desktop {
+   #desktop-small {
+      display: none;
+   }
+ 
+    #tablet {
+       display: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: 'Trebuchet MS';
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+   }
+ 
+    .cardContainer {
+       display: grid;
+       row-gap: 20px;
+       grid-auto-rows: 100px;
+       margin: 15px 15px;
+       background: #000000;
+    }
+ 
+    .headerContainer {
+       position: fixed;
+       background-color: none;
+       display: flex; /* Use flex to align header and footer side by side */
+       justify-content: space-between; /* Push header and footer to the edges */
+       align-items: center; /* Vertically center header and footer */
+       bottom: 0px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       height: 50px;
+       z-index: 100; /* Ensure it stays above other elements */
+    }
+    
+    .fixedHeader {
+       display: flex; /* Align items inside header horizontally */
+       justify-content: space-between;
+       align-items: center;
+       height: 50px;
+       width: 300px;
+       backdrop-filter: blur(20px);
+       border-radius: 15px;
+       border: 1px solid rgb(32, 32, 32);
+    }
+ 
+    .introLogo {
+       width: 50px;
+       margin-bottom: 18px;
+    }
+    
+    .headerLogo {
+       width: 35px;
+       transition: transform 0.5s ease;
+       order: 1;
+       margin-left: 12px;
+    }
+    
+    .headerLogo:hover {
+       animation: rotateLogo 12s linear infinite;
+    }
+    
+    @keyframes rotateLogo {
+       from {
+          transform: rotate(0deg);
+       }
+       to {
+          transform: rotate(360deg);
+       }
+    }
+    
+    .headerName {
+       font-size: 14px;
+       font-family: 'Trebuchet MS';
+       font-weight: bold;
+       color: white;
+       order: 2;
+       margin-right: 12px;
+    }
+    
+    .fixedFooter {
+       display: flex; /* Align buttons inside footer horizontally */
+       justify-content: space-between;
+       align-items: center;
+       height: 80px;
+       border-radius: 20px;
+    }
+    
+    .fixedButton1, .fixedButton2 {
+       width: 50px;
+       height: 50px;
+       font-size: 15px;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+       display: flex;
+       font-weight: 600;
+       font-family: 'Trebuchet MS';
+       border-radius: 15px;
+    }
+ 
+    
+    .fixedButton1 {
+       color: black;
+       background-color: white;
+    }
+    
+    .fixedButton2 {
+       color: white;
+       background-color: #ca48fd;
+    }
+    
+    .fixedButton2:hover {
+       transform: scale(0.95);
+    }
+ 
+    .cardIntroduction {
+       position: relative;
+       font-family: 'Trebuchet MS';
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       border-radius: 30px;
+       transition: all 400ms;
+       box-sizing: border-box;
+    }
+ 
+    .cardInfo {
+       position: relative;
+       font-family: 'Trebuchet MS';
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       border-radius: 30px;
+       transition: all 400ms;
+       box-sizing: border-box;
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+    .cardMeta {
+       margin-top: -10px;
+       font-family: 'Trebuchet MS';
+       font-size: 16px;
+       color: rgb(148, 148, 148);
+       width: 295px;
+       font-weight: bold;
+    }
+ 
+ 
+ 
+    .cardTitle {
+       font-size: 30px;
+       font-family: 'Trebuchet MS';
+       font-weight: bold;
+       color: white;
+       width: 300px;
+    }
+ 
+ 
+    .cardFooter {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       color: white;
+    }
+ 
+    .footerName {
+       font-family: 'Trebuchet MS';
+       font-size: 12px;
+       font-weight: bold;
+       color: white;
+    }
+ }
+ 
+ @media only screen and (max-width: 1100px) and (min-width: 511px) {
+    #desktop {
+       display: none;
+    }
+
+   #desktop-big {
+      display: none;
+   }
+
+   #desktop-small {
+      display: none;
+   }
+ 
+    #mobile {
+       display: none;
+    }
+ 
+    .cardContainer {
+       display: grid;
+       row-gap: 20px;
+       grid-auto-rows: 100px;
+       margin: 15px 15px;
+       background: #000000;
+    }
+ 
+    .cardInfo {
+       position: relative;
+       font-family: 'Trebuchet MS';
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       border-radius: 30px;
+       transition: all 400ms;
+       box-sizing: border-box;
+    }
+ 
+    .headerContainer {
+       position: fixed;
+       background-color: none;
+       display: flex; /* Use flex to align header and footer side by side */
+       justify-content: space-between; /* Push header and footer to the edges */
+       align-items: center; /* Vertically center header and footer */
+       bottom: 0px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       height: 50px;
+       z-index: 100; /* Ensure it stays above other elements */
+    }
+    
+    .fixedHeader {
+       display: flex; /* Align items inside header horizontally */
+       justify-content: space-between;
+       align-items: center;
+       height: 50px;
+       width: 300px;
+       backdrop-filter: blur(20px);
+       border-radius: 15px;
+       border: 1px solid rgb(32, 32, 32);
+    }
+ 
+    .introLogo {
+       width: 50px;
+       margin-bottom: 18px;
+    }
+    
+    .headerLogo {
+       width: 35px;
+       transition: transform 0.5s ease;
+       order: 1;
+       margin-left: 12px;
+    }
+    
+    .headerLogo:hover {
+       animation: rotateLogo 12s linear infinite;
+    }
+    
+    @keyframes rotateLogo {
+       from {
+          transform: rotate(0deg);
+       }
+       to {
+          transform: rotate(360deg);
+       }
+    }
+    
+    .headerName {
+       font-size: 14px;
+       font-family: 'Trebuchet MS';
+       font-weight: bold;
+       color: white;
+       order: 2;
+       margin-right: 12px;
+    }
+    
+    .fixedFooter {
+       display: flex; /* Align buttons inside footer horizontally */
+       justify-content: space-between;
+       align-items: center;
+       height: 80px;
+       border-radius: 20px;
+    }
+    
+    .fixedButton1, .fixedButton2 {
+       width: 50px;
+       height: 50px;
+       font-size: 15px;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+       display: flex;
+       font-weight: 600;
+       font-family: 'Trebuchet MS';
+       border-radius: 15px;
+    }
+ 
+    a {
+       text-decoration: none;
+       font-family: 'Trebuchet MS';
+       font-size: 16px;
+       color: white;
+       font-weight: bold;
+    }
+    
+    .fixedButton1 {
+       color: black;
+       background-color: white;
+    }
+    
+    .fixedButton2 {
+       color: white;
+       background-color: #ca48fd;
+    }
+    
+    .fixedButton2:hover {
+       transform: scale(0.95);
+    }
+ 
+    .cardIntroduction {
+       position: relative;
+       font-family: 'Trebuchet MS';
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       border-radius: 30px;
+       transition: all 400ms;
+       box-sizing: border-box;
+    }
+ 
+ 
+ 
+    .cardMeta {
+       margin-top: -9px;
+       font-family: 'Trebuchet MS';
+       font-size: 16px;
+       color: rgb(148, 148, 148);
+       width: 295px;
+       font-weight: bold;
+    }
+ 
+ 
+    .cardTitle {
+       font-size: 30px;
+       font-family: 'Trebuchet MS';
+       font-weight: bold;
+       color: white;
+       width: 300px;
+    }
+ 
+    .footerName {
+       font-family: 'Trebuchet MS';
+       font-size: 16px;
+       font-weight: bold;
+       color: white;
+    }
+ 
+    .cardFooter {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       text-align: center;
+       align-items: center;
+       color: white;
+       margin-bottom: 80px;
+    }
+ 
+ }
+
+ @media only screen and (max-width: 1550px) and (min-width: 1101px) {
+
+   #mobile {
       display: none;
    }
 
    #desktop-big {
-     display: none;
-  }
-
-  #desktop-small {
-     display: none;
-  }
-
-   #tablet {
       display: none;
    }
 
-   .cardContainer {
-      display: grid;
-      row-gap: 20px;
-      grid-auto-rows: 100px;
-      margin: 15px 15px;
-      background: #000000;
-   }
-
-   .headerContainer {
-      position: fixed;
-      background-color: none;
-      display: flex; /* Use flex to align header and footer side by side */
-      justify-content: space-between; /* Push header and footer to the edges */
-      align-items: center; /* Vertically center header and footer */
-      bottom: 0px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 50px;
-      z-index: 100; /* Ensure it stays above other elements */
-   }
-   
-   .fixedHeader {
-      display: flex; /* Align items inside header horizontally */
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      width: 300px;
-      backdrop-filter: blur(20px);
-      border-radius: 15px;
-      border: 1px solid rgb(32, 32, 32);
-   }
-
-   .introLogo {
-      width: 50px;
-      margin-bottom: 18px;
-   }
-   
-   .headerLogo {
-      width: 35px;
-      transition: transform 0.5s ease;
-      order: 1;
-      margin-left: 12px;
-   }
-   
-   .headerLogo:hover {
-      animation: rotateLogo 12s linear infinite;
-   }
-   
-   @keyframes rotateLogo {
-      from {
-         transform: rotate(0deg);
-      }
-      to {
-         transform: rotate(360deg);
-      }
-   }
-   
-   .headerName {
-      font-size: 14px;
-      font-family: 'Trebuchet MS';
-      font-weight: bold;
-      color: white;
-      order: 2;
-      margin-right: 12px;
-   }
-   
-   .fixedFooter {
-      display: flex; /* Align buttons inside footer horizontally */
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-      border-radius: 20px;
-   }
-   
-   .fixedButton1, .fixedButton2 {
-      width: 50px;
-      height: 50px;
-      font-size: 15px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      font-weight: 600;
-      font-family: 'Trebuchet MS';
-      border-radius: 15px;
-   }
-
-   a {
-      text-decoration: none;
-   }
-   
-   .fixedButton1 {
-      color: black;
-      background-color: white;
-   }
-   
-   .fixedButton2 {
-      color: white;
-      background-color: #ca48fd;
-   }
-   
-   .fixedButton2:hover {
-      transform: scale(0.95);
-   }
-
-   .cardIntroduction {
-      position: relative;
-      font-family: 'Trebuchet MS';
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 30px;
-      transition: all 400ms;
-      box-sizing: border-box;
-   }
-
-   .cardInfo {
-      position: relative;
-      font-family: 'Trebuchet MS';
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 30px;
-      transition: all 400ms;
-      box-sizing: border-box;
-   }
-
-
-
-
-
-
-   .cardMeta {
-      margin-top: -10px;
-      font-family: 'Trebuchet MS';
-      font-size: 16px;
-      color: rgb(148, 148, 148);
-      width: 295px;
-   }
-
-
-
-   .cardTitle {
-      font-size: 30px;
-      font-family: 'Trebuchet MS';
-      font-weight: bold;
-      color: white;
-      width: 300px;
-   }
-
-
-   .cardFooter {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      color: white;
-   }
-
-   .footerName {
-      font-family: 'Trebuchet MS';
-      font-size: 12px;
-      font-weight: bold;
-      color: white;
-   }
-}
-
-@media only screen and (max-width: 1100px) and (min-width: 511px) {
    #desktop {
       display: none;
    }
-
-  #desktop-big {
-     display: none;
-  }
-
-  #desktop-small {
-     display: none;
-  }
-
-   #mobile {
-      display: none;
-   }
-
-   .cardContainer {
-      display: grid;
-      row-gap: 20px;
-      grid-auto-rows: 100px;
-      margin: 15px 15px;
-      background: #000000;
-   }
-
-   .cardInfo {
-      position: relative;
-      font-family: 'Trebuchet MS';
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 30px;
-      transition: all 400ms;
-      box-sizing: border-box;
-   }
-
-   .headerContainer {
-      position: fixed;
-      background-color: none;
-      display: flex; /* Use flex to align header and footer side by side */
-      justify-content: space-between; /* Push header and footer to the edges */
-      align-items: center; /* Vertically center header and footer */
-      bottom: 0px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 50px;
-      z-index: 100; /* Ensure it stays above other elements */
-   }
-   
-   .fixedHeader {
-      display: flex; /* Align items inside header horizontally */
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      width: 300px;
-      backdrop-filter: blur(20px);
-      border-radius: 15px;
-      border: 1px solid rgb(32, 32, 32);
-   }
-
-   .introLogo {
-      width: 50px;
-      margin-bottom: 18px;
-   }
-   
-   .headerLogo {
-      width: 35px;
-      transition: transform 0.5s ease;
-      order: 1;
-      margin-left: 12px;
-   }
-   
-   .headerLogo:hover {
-      animation: rotateLogo 12s linear infinite;
-   }
-   
-   @keyframes rotateLogo {
-      from {
-         transform: rotate(0deg);
-      }
-      to {
-         transform: rotate(360deg);
-      }
-   }
-   
-   .headerName {
-      font-size: 14px;
-      font-family: 'Trebuchet MS';
-      font-weight: bold;
-      color: white;
-      order: 2;
-      margin-right: 12px;
-   }
-   
-   .fixedFooter {
-      display: flex; /* Align buttons inside footer horizontally */
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-      border-radius: 20px;
-   }
-   
-   .fixedButton1, .fixedButton2 {
-      width: 50px;
-      height: 50px;
-      font-size: 15px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      font-weight: 600;
-      font-family: 'Trebuchet MS';
-      border-radius: 15px;
-   }
-
-   a {
-      text-decoration: none;
-   }
-   
-   .fixedButton1 {
-      color: black;
-      background-color: white;
-   }
-   
-   .fixedButton2 {
-      color: white;
-      background-color: #ca48fd;
-   }
-   
-   .fixedButton2:hover {
-      transform: scale(0.95);
-   }
-
-   .cardIntroduction {
-      position: relative;
-      font-family: 'Trebuchet MS';
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 30px;
-      transition: all 400ms;
-      box-sizing: border-box;
-   }
-
-
-
-   .cardMeta {
-      margin-top: -9px;
-      font-family: 'Trebuchet MS';
-      font-size: 16px;
-      color: rgb(148, 148, 148);
-      width: 295px;
-   }
-
-
-   .cardTitle {
-      font-size: 30px;
-      font-family: 'Trebuchet MS';
-      font-weight: bold;
-      color: white;
-      width: 300px;
-   }
-
-   .footerName {
-      font-family: 'Trebuchet MS';
-      font-size: 13px;
-      font-weight: bold;
-      color: white;
-   }
-
-   .cardFooter {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      color: white;
-      margin-bottom: 80px;
-   }
-
-}
-
-@media only screen and (max-width: 1550px) and (min-width: 1101px) {
-
-  #mobile {
-     display: none;
-  }
-
-  #desktop-big {
-     display: none;
-  }
-
-  #desktop {
-     display: none;
-  }
-
-  #tablet {
-     display: none;
-  }
-
-  .cardContainer {
-     display: grid;
-     row-gap: 20px;
-     grid-auto-rows: 100px;
-     margin: 50px 200px;
-     background: #000000;
-  }
-
-  .headerContainer {
-     position: fixed;
-     background-color: none;
-     display: flex; /* Use flex to align header and footer side by side */
-     justify-content: space-between; /* Push header and footer to the edges */
-     align-items: center; /* Vertically center header and footer */
-     bottom: 20px;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     height: 80px;
-     z-index: 100; /* Ensure it stays above other elements */
-  }
-  
-  .fixedHeader {
-     display: flex; /* Align items inside header horizontally */
-     justify-content: space-between;
-     align-items: center;
-     height: 80px;
-     width: 500px;
-     backdrop-filter: blur(20px);
-     border-radius: 20px;
-     border: 1px solid rgb(32, 32, 32);
-  }
-  
-  .headerLogo {
-     width: 53px;
-     transition: transform 0.5s ease;
-     order: 1;
-     margin-left: 20px;
-  }
-  
-  .headerLogo:hover {
-     animation: rotateLogo 12s linear infinite;
-  }
-  
-  @keyframes rotateLogo {
-     from {
-        transform: rotate(0deg);
-     }
-     to {
-        transform: rotate(360deg);
-     }
-  }
-  
-  .headerName {
-     font-size: 21px;
-     font-family: 'Trebuchet MS';
-     font-weight: bold;
-     color: white;
-     order: 2;
-     margin-right: 20px;
-  }
-  
-  .fixedFooter {
-     display: flex; /* Align buttons inside footer horizontally */
-     justify-content: space-between;
-     align-items: center;
-     height: 80px;
-     border-radius: 20px;
-  }
-  
-  .fixedButton1, .fixedButton2 {
-     width: 105px;
-     height: 75px;
-     font-size: 15px;
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-     display: flex;
-     font-weight: 600;
-     font-family: 'Trebuchet MS';
-     border-radius: 15px;
-     margin-left: 10px;
-  }
-  
-  .fixedButton1 {
-     color: black;
-     background-color: white;
-  }
-  
-  .fixedButton2 {
-     color: white;
-     background-color: #ca48fd;
-  }
-  
-  .fixedButton1:hover, .fixedButton2:hover {
-     transform: scale(0.95);
-  }
-  
-
-  .cardIntroduction {
-     position: relative;
-     font-family: 'Trebuchet MS';
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     border-radius: 30px;
-     transition: all 400ms;
-     box-sizing: border-box;
-  }
-
-
-
-  .cardMeta {
-     margin-top: -40px;
-     font-family: 'Trebuchet MS';
-     font-size: 18px;
-     color: rgb(148, 148, 148);
-  }
-
-  .cardTitle {
-     font-size: 40px;
-     font-family: 'Trebuchet MS';
-     font-weight: bold;
-     color: white;
-  }
-
-
-  .cardInfo {
-     position: relative;
-     font-family: 'Trebuchet MS';
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     border-radius: 30px;
-     transition: all 400ms;
-     box-sizing: border-box;
-  }
-
-
-
-
-  .introLogo {
-     width: 66px;
-     margin-bottom: 25px;
-  }
-
-
-  .cardFooter {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     align-items: center;
-     color: white;
-     margin-bottom: 110px;
-  }
-
-  .footerName {
-     font-family: 'Trebuchet MS';
-     font-size: 20px;
-     font-weight: bold;
-     color: white;
-  }
-
-}
-
-
-@media only screen and (max-width: 2000px) and (min-width: 1551px) { 
-   #mobile {
-      display: none;
-   }
-
-  #desktop-big {
-     display: none;
-  }
-
-  #desktop-small {
-     display: none;
-  }
 
    #tablet {
       display: none;
@@ -696,15 +520,15 @@ html {
 
 
    .cardMeta {
-      margin-top: -50px;
+      margin-top: -40px;
       font-family: 'Trebuchet MS';
-      font-size: 20px;
+      font-size: 18px;
       color: rgb(148, 148, 148);
-      width: 1000px;
+      font-weight: bold;
    }
 
    .cardTitle {
-      font-size: 60px;
+      font-size: 40px;
       font-family: 'Trebuchet MS';
       font-weight: bold;
       color: white;
@@ -728,7 +552,7 @@ html {
 
 
    .introLogo {
-      width: 75px;
+      width: 66px;
       margin-bottom: 25px;
    }
 
@@ -750,191 +574,405 @@ html {
       color: white;
    }
 
+   a {
+      text-decoration: none;
+      font-family: 'Trebuchet MS';
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+   }
+
 }
+ 
+ 
+ @media only screen and (max-width: 2000px) and (min-width: 1551px) { 
+    #mobile {
+       display: none;
+    }
 
-@media only screen and (min-width: 2001px) { 
-  #mobile {
-     display: none;
-  }
+   #desktop-big {
+      display: none;
+   }
 
-  #tablet {
-     display: none;
-  }
+   #desktop-small {
+      display: none;
+   }
+ 
+    #tablet {
+       display: none;
+    }
+ 
+    .cardContainer {
+       display: grid;
+       row-gap: 20px;
+       grid-auto-rows: 100px;
+       margin: 50px 200px;
+       background: #000000;
+    }
+ 
+    .headerContainer {
+       position: fixed;
+       background-color: none;
+       display: flex; /* Use flex to align header and footer side by side */
+       justify-content: space-between; /* Push header and footer to the edges */
+       align-items: center; /* Vertically center header and footer */
+       bottom: 20px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       height: 80px;
+       z-index: 100; /* Ensure it stays above other elements */
+    }
+    
+    .fixedHeader {
+       display: flex; /* Align items inside header horizontally */
+       justify-content: space-between;
+       align-items: center;
+       height: 80px;
+       width: 500px;
+       backdrop-filter: blur(20px);
+       border-radius: 20px;
+       border: 1px solid rgb(32, 32, 32);
+    }
+    
+    .headerLogo {
+       width: 53px;
+       transition: transform 0.5s ease;
+       order: 1;
+       margin-left: 20px;
+    }
+    
+    .headerLogo:hover {
+       animation: rotateLogo 12s linear infinite;
+    }
+    
+    @keyframes rotateLogo {
+       from {
+          transform: rotate(0deg);
+       }
+       to {
+          transform: rotate(360deg);
+       }
+    }
+    
+    .headerName {
+       font-size: 21px;
+       font-family: 'Trebuchet MS';
+       font-weight: bold;
+       color: white;
+       order: 2;
+       margin-right: 20px;
+    }
+    
+    .fixedFooter {
+       display: flex; /* Align buttons inside footer horizontally */
+       justify-content: space-between;
+       align-items: center;
+       height: 80px;
+       border-radius: 20px;
+    }
+    
+    .fixedButton1, .fixedButton2 {
+       width: 105px;
+       height: 75px;
+       font-size: 15px;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+       display: flex;
+       font-weight: 600;
+       font-family: 'Trebuchet MS';
+       border-radius: 15px;
+       margin-left: 10px;
+    }
+    
+    .fixedButton1 {
+       color: black;
+       background-color: white;
+    }
+    
+    .fixedButton2 {
+       color: white;
+       background-color: #ca48fd;
+    }
+    
+    .fixedButton1:hover, .fixedButton2:hover {
+       transform: scale(0.95);
+    }
+    
+ 
+    .cardIntroduction {
+       position: relative;
+       font-family: 'Trebuchet MS';
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       border-radius: 30px;
+       transition: all 400ms;
+       box-sizing: border-box;
+    }
+ 
+ 
+ 
+    .cardMeta {
+       margin-top: -50px;
+       font-family: 'Trebuchet MS';
+       font-size: 20px;
+       color: rgb(148, 148, 148);
+       width: 1000px;
+       font-weight: bold;
+    }
+ 
+    .cardTitle {
+       font-size: 60px;
+       font-family: 'Trebuchet MS';
+       font-weight: bold;
+       color: white;
+    }
+ 
+ 
+    .cardInfo {
+       position: relative;
+       font-family: 'Trebuchet MS';
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       border-radius: 30px;
+       transition: all 400ms;
+       box-sizing: border-box;
+    }
+ 
+ 
+ 
+ 
+    .introLogo {
+       width: 75px;
+       margin-bottom: 25px;
+    }
+ 
+ 
+    .cardFooter {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       text-align: center;
+       align-items: center;
+       color: white;
+       margin-bottom: 110px;
+    }
+ 
+    .footerName {
+       font-family: 'Trebuchet MS';
+       font-size: 20px;
+       font-weight: bold;
+       color: white;
+    }
 
-  #desktop {
-     display: none;
-  }
+    a {
+      text-decoration: none;
+      font-family: 'Trebuchet MS';
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+   }
+ 
+ }
 
-  #desktop-small {
-     display: none;
-  }
+ @media only screen and (min-width: 2001px) { 
+   #mobile {
+      display: none;
+   }
 
-  .cardContainer {
-     display: grid;
-     row-gap: 20px;
-     grid-auto-rows: 100px;
-     margin: 50px 200px;
-     background: #000000;
-  }
+   #tablet {
+      display: none;
+   }
 
-  .headerContainer {
-     position: fixed;
-     background-color: none;
-     display: flex; /* Use flex to align header and footer side by side */
-     justify-content: space-between; /* Push header and footer to the edges */
-     align-items: center; /* Vertically center header and footer */
-     bottom: 20px;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     height: 80px;
-     z-index: 100; /* Ensure it stays above other elements */
-  }
-  
-  .fixedHeader {
-     display: flex; /* Align items inside header horizontally */
-     justify-content: space-between;
-     align-items: center;
-     height: 80px;
-     width: 500px;
-     backdrop-filter: blur(20px);
-     border-radius: 20px;
-     border: 1px solid rgb(32, 32, 32);
-  }
-  
-  .headerLogo {
-     width: 53px;
-     transition: transform 0.5s ease;
-     order: 1;
-     margin-left: 20px;
-  }
-  
-  .headerLogo:hover {
-     animation: rotateLogo 12s linear infinite;
-  }
-  
-  @keyframes rotateLogo {
-     from {
-        transform: rotate(0deg);
-     }
-     to {
-        transform: rotate(360deg);
-     }
-  }
-  
-  .headerName {
-     font-size: 21px;
-     font-family: 'Trebuchet MS';
-     font-weight: bold;
-     color: white;
-     order: 2;
-     margin-right: 20px;
-  }
-  
-  .fixedFooter {
-     display: flex; /* Align buttons inside footer horizontally */
-     justify-content: space-between;
-     align-items: center;
-     height: 80px;
-     border-radius: 20px;
-  }
-  
-  .fixedButton1, .fixedButton2 {
-     width: 105px;
-     height: 75px;
-     font-size: 15px;
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-     display: flex;
-     font-weight: 600;
-     font-family: 'Trebuchet MS';
-     border-radius: 15px;
-     margin-left: 10px;
-  }
-  
-  .fixedButton1 {
-     color: black;
-     background-color: white;
-  }
-  
-  .fixedButton2 {
-     color: white;
-     background-color: #ca48fd;
-  }
-  
-  .fixedButton1:hover, .fixedButton2:hover {
-     transform: scale(0.95);
-  }
-  
+   #desktop {
+      display: none;
+   }
 
-  .cardIntroduction {
-     position: relative;
-     font-family: 'Trebuchet MS';
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     border-radius: 30px;
-     transition: all 400ms;
-     box-sizing: border-box;
-  }
+   #desktop-small {
+      display: none;
+   }
 
+   .cardContainer {
+      display: grid;
+      row-gap: 20px;
+      grid-auto-rows: 100px;
+      margin: 50px 200px;
+      background: #000000;
+   }
 
+   .headerContainer {
+      position: fixed;
+      background-color: none;
+      display: flex; /* Use flex to align header and footer side by side */
+      justify-content: space-between; /* Push header and footer to the edges */
+      align-items: center; /* Vertically center header and footer */
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80px;
+      z-index: 100; /* Ensure it stays above other elements */
+   }
+   
+   .fixedHeader {
+      display: flex; /* Align items inside header horizontally */
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      width: 500px;
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid rgb(32, 32, 32);
+   }
+   
+   .headerLogo {
+      width: 53px;
+      transition: transform 0.5s ease;
+      order: 1;
+      margin-left: 20px;
+   }
+   
+   .headerLogo:hover {
+      animation: rotateLogo 12s linear infinite;
+   }
+   
+   @keyframes rotateLogo {
+      from {
+         transform: rotate(0deg);
+      }
+      to {
+         transform: rotate(360deg);
+      }
+   }
+   
+   .headerName {
+      font-size: 21px;
+      font-family: 'Trebuchet MS';
+      font-weight: bold;
+      color: white;
+      order: 2;
+      margin-right: 20px;
+   }
+   
+   .fixedFooter {
+      display: flex; /* Align buttons inside footer horizontally */
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      border-radius: 20px;
+   }
+   
+   .fixedButton1, .fixedButton2 {
+      width: 105px;
+      height: 75px;
+      font-size: 15px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-weight: 600;
+      font-family: 'Trebuchet MS';
+      border-radius: 15px;
+      margin-left: 10px;
+   }
+   
+   .fixedButton1 {
+      color: black;
+      background-color: white;
+   }
+   
+   .fixedButton2 {
+      color: white;
+      background-color: #ca48fd;
+   }
+   
+   .fixedButton1:hover, .fixedButton2:hover {
+      transform: scale(0.95);
+   }
+   
 
-  .cardMeta {
-     margin-top: -50px;
-     font-family: 'Trebuchet MS';
-     font-size: 25px;
-     color: rgb(148, 148, 148);
-     width: 1000px;
-  }
-
-  .cardTitle {
-     font-size: 80px;
-     font-family: 'Trebuchet MS';
-     font-weight: bold;
-     color: white;
-  }
-
-
-  .cardInfo {
-     position: relative;
-     font-family: 'Trebuchet MS';
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     border-radius: 30px;
-     transition: all 400ms;
-     box-sizing: border-box;
-  }
+   .cardIntroduction {
+      position: relative;
+      font-family: 'Trebuchet MS';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 30px;
+      transition: all 400ms;
+      box-sizing: border-box;
+   }
 
 
 
+   .cardMeta {
+      margin-top: -50px;
+      font-family: 'Trebuchet MS';
+      font-size: 25px;
+      color: rgb(148, 148, 148);
+      width: 1000px;
+      font-weight: bold;
+   }
 
-  .introLogo {
-     width: 85px;
-     margin-bottom: 25px;
-  }
+   .cardTitle {
+      font-size: 80px;
+      font-family: 'Trebuchet MS';
+      font-weight: bold;
+      color: white;
+   }
 
 
-  .cardFooter {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     align-items: center;
-     color: white;
-     margin-bottom: 110px;
-  }
+   .cardInfo {
+      position: relative;
+      font-family: 'Trebuchet MS';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 30px;
+      transition: all 400ms;
+      box-sizing: border-box;
+   }
 
-  .footerName {
-     font-family: 'Trebuchet MS';
-     font-size: 20px;
-     font-weight: bold;
-     color: white;
-  }
+
+
+
+   .introLogo {
+      width: 85px;
+      margin-bottom: 25px;
+   }
+
+
+   .cardFooter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: white;
+      margin-bottom: 110px;
+   }
+
+   .footerName {
+      font-family: 'Trebuchet MS';
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+   }
+
+   a {
+      text-decoration: none;
+      font-family: 'Trebuchet MS';
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+   }
 
 }
